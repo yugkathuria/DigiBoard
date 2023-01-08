@@ -1,0 +1,50 @@
+<%- include('partials/header') %>
+<header class="blu">
+  <div class="row">
+  <div class="topleft col-sm-7">
+    
+  
+  <p>&nbsp;<i class="fas fa-pen-nib "></i>&nbsp;DigiBoard</p>
+   </div>
+  <div class="top col-sm-4">
+  <a class="btn btn-dark btn-m" href="/posta" role="button">Post</a>
+  <a class="btn btn-light btn-m" href="/logout" role="button">Log Out</a>
+</div>
+</div>
+</header>
+<body class="gr">
+<div class=" text-center">
+  <div class="gr cards">
+   
+    <h3><b>Feed!</b></h3>
+    
+   
+    <!-- <% usersWithPosta.forEach(function(user){ %>
+      <p class="digi-text"><%=user.posta%></p>
+    <% }); %> -->
+    
+    <%  for(var i=usersWithPosta.length-1;i>=0;i--){ %>
+      
+      <div class="card dis">
+        <div class="card-body lf">
+          <h3><b><%=usersWithPosta[i].title%></b></h3>
+          <p> By: <%=usersWithPosta[i].username%></p>
+      
+  
+      <p>
+        
+      <%=usersWithPosta[i].content%>
+      
+      </p>
+      <hr>
+      <p><%=usersWithPosta[i].date%></p>
+    </div>
+      </div>
+  
+      <% } %>
+   
+    
+  </div>
+</div>
+</body>
+<%- include('partials/footer') %>
